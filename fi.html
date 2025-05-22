@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>財務自由計算器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>財務提領蒙地卡羅模擬</h1>
+
+    <form id="simulationForm">
+        <label>初始資金:</label>
+        <input type="number" id="initial_capital" value="1000000"><br>
+
+        <label>初始提領金額:</label>
+        <input type="number" id="initial_spending" value="40000"><br>
+
+        <label>投資組合年化報酬率 (%):</label>
+        <input type="number" id="expected_return" value="6" step="0.1"><br>
+
+        <label>投資組合波動率 (%):</label>
+        <input type="number" id="volatility" value="15" step="0.1"><br>
+
+        <label>通膨率(%):</label>
+        <input type="number" id="inflation_rate" value="2" step="0.1"><br>
+
+        <label>模擬年數:</label>
+        <input type="number" id="years" value="30"><br>
+
+        <label>模擬次數:</label>
+        <input type="number" id="num_simulations" value="10000"><br>
+
+        <button type="button" onclick="runSimulation()">開始模擬</button>
+    </form>
+
+    <h2>結果: <span id="result"></span></h2>
+
+    <script src="script.js"></script>
+</body>
+</html>
